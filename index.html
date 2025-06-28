@@ -79,10 +79,11 @@
         A free, open-source hub that unifies Project Euler, Code Jam, Kick Start, IEEEXtreme, and community tasks
         in one distraction-free, high-performance workspace.
       </p>
-      <a href="#cta"
+      <!-- "Try it" turned into a button so we can attach JS handlers -->
+      <button id="tryButton"
         class="inline-block bg-cyan-500 hover:bg-cyan-400 active:bg-cyan-600 text-slate-900 font-bold py-3 px-8 rounded-full shadow-lg transition mb-4">
-        Try the Beta &rarr;
-      </a>
+        Try it! &rarr;
+      </button>
     </div>
     <!-- Decorative SVG -->
     <svg class="absolute pointer-events-none opacity-10 w-[80rem] -z-10 -translate-y-20" viewBox="0 0 1024 1024"
@@ -159,13 +160,37 @@
     </div>
   </section>
 
+  <!-- Challenge CTA (Initially hidden) -->
+  <section id="cta" class="py-24 px-6 md:px-20 hidden">
+    <div class="max-w-3xl mx-auto bg-slate-800/50 backdrop-blur-lg p-8 rounded-2xl shadow-2xl">
+      <h3 class="text-2xl md:text-3xl font-extrabold mb-4 text-center">Challenge: Add Two Numbers</h3>
+      <p class="text-slate-300 mb-6 text-center">Write a program that reads two integers <code>a</code> and
+        <code>b</code> from standard input and prints their sum.</p>
+
+      <label for="code" class="block mb-2 font-semibold">Python code:</label>
+      <textarea id="code" class="w-full min-h-[200px] p-4 bg-slate-900 rounded-lg font-mono text-sm leading-tight"># Write your code here
+# For example:
+a, b = map(int, input().split())
+print(a + b)</textarea>
+
+      <button id="run"
+        class="mt-4 bg-cyan-500 hover:bg-cyan-400 active:bg-cyan-600 text-slate-900 font-bold py-2 px-6 rounded-full">Run</button>
+
+      <pre id="output" class="mt-6 bg-black text-green-400 p-4 rounded-lg whitespace-pre-wrap"></pre>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="mt-auto py-8 text-center text-sm text-slate-500">
     © 2025 Open-CP. Built with ❤ by the open-source community.
   </footer>
 
-  <!-- Simple Scroll Reveal Animation -->
+  <!-- Pyodide -->
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js"></script>
+
+  <!-- Simple Scroll Reveal Animation & Challenge Logic -->
   <script>
+    // Reveal animation
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -175,8 +200,48 @@
         }
       });
     }, { threshold: 0.1 });
-
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Load Pyodide once and cache the promise
+    const pyodideReadyPromise = loadPyodide();
+
+    // Handle "Try it" button click
+    document.getElementById('tryButton').addEventListener('click', async () => {
+      const ctaSection = document.getElementById('cta');
+      ctaSection.classList.remove('hidden');
+      ctaSection.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Run code on button click
+    document.getElementById('run').addEventListener('click', async () => {
+      const pyodide = await pyodideReadyPromise; // Wait for Pyodide to be ready
+      const userCode = document.getElementById('code').value;
+
+      const testInput = "2 3\n"; // simple test case
+      const expectedOutput = "5";
+
+      // Prepare Python to capture input/output
+      const wrapper = `\nimport sys, builtins, io\n_input_iter = iter(${JSON.stringify(testInput)}.splitlines())\nbuiltins.input = lambda: next(_input_iter)\n_stdout_buffer = io.StringIO()\nsys.stdout = _stdout_buffer\n` + userCode + `\nresult = _stdout_buffer.getvalue().strip()\n`;
+
+      try {
+        await pyodide.runPythonAsync(wrapper);
+        const result = pyodide.globals.get('result');
+        const outputBox = document.getElementById('output');
+        if (result === expectedOutput) {
+          outputBox.textContent = `✅ Correct! Output: ${result}`;
+          outputBox.classList.remove('text-red-400');
+          outputBox.classList.add('text-green-400');
+        } else {
+          outputBox.textContent = `❌ Incorrect. Your output: ${result} (expected ${expectedOutput})`;
+          outputBox.classList.remove('text-green-400');
+          outputBox.classList.add('text-red-400');
+        }
+      } catch (err) {
+        document.getElementById('output').textContent = '❌ Error: ' + err;
+        document.getElementById('output').classList.remove('text-green-400');
+        document.getElementById('output').classList.add('text-red-400');
+      }
+    });
   </script>
 
 </body>
