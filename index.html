@@ -40,17 +40,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
 
-  
+
   <!-- Pyodide -->
   <script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js"></script>
 
   <!-- Ace core -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.36.5/ace.js" type="text/javascript"
-        charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.36.5/ace.js" type="text/javascript"
+    charset="utf-8"></script>
 
   <!-- Autocomplete/snippets support -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.7/ext-language_tools.min.js" type="text/javascript"
-        charset="utf-8"></script>
+    charset="utf-8"></script>
 
 
   <!-- Global Styles -->
@@ -73,7 +73,8 @@
       <img src="images/logo-transparent-bg-black.png" class="h-24" />
     </h1>
     <nav class="hidden md:flex gap-8 text-sm font-semibold">
-      <a href="#features" class="hover:text-cyan-400 transition">Features</a>
+      <a href="#vision" class="hover:text-cyan-400 transition">Vision</a>
+      <a href="#community" class="hover:text-cyan-400 transition">Community</a>
       <a href="#ecosystem" class="hover:text-cyan-400 transition">Ecosystem</a>
       <a href="#cta" class="hover:text-cyan-400 transition">Try it</a>
     </nav>
@@ -87,7 +88,8 @@
         & grow <span class="text-blue-500">deeper skills</span>
       </h2>
       <p class="text-lg md:text-xl text-slate-300 mb-10">
-        Open-CP initiative envisions a free, open-source hub that unifies Project Euler, Code Jam, Kick Start, IEEEXtreme, and community tasks
+        Open-CP initiative envisions a free, open-source hub that unifies Project Euler, Code Jam, Kick Start,
+        IEEEXtreme, and community tasks
         in one distraction-free platform fostering high-performance workspaces.
       </p>
       <!-- "Try it" turned into a button so we can attach JS handlers -->
@@ -110,26 +112,34 @@
   </section>
 
   <!-- Features -->
-  <section id="features" class="py-24 px-6 md:px-20 bg-slate-900/60 backdrop-blur reveal opacity-0 translate-y-6">
+  <section id="vision" class="py-24 px-6 md:px-20 bg-slate-900/60 backdrop-blur reveal opacity-0 translate-y-6">
     <div class="max-w-5xl mx-auto">
       <h3 class="text-3xl md:text-4xl font-extrabold mb-12 text-center">Why Open-CP?</h3>
       <div class="grid md:grid-cols-3 gap-12">
         <div class="flex flex-col items-center text-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mb-4 text-cyan-400" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M9 12h6m2 0a2 2 0 110-4l-1.362-2.724A2 2 0 0013 4.876L12 3l-.293.439a2 2 0 00-3.344 0L6 7.5a2 2 0 000 4h2m-2 0a2 2 0 110 4l1.362 2.724A2 2 0 0011 19.124L12 21l.293-.439a2 2 0 003.344 0L18 16.5a2 2 0 000-4h-2" />
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="h-12 w-12 mb-4 text-cyan-400">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M8 9l3 3l-3 3" />
+            <path d="M13 15h3" />
+            <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
           </svg>
           <h4 class="font-bold text-lg mb-2">Unified Library</h4>
           <p class="text-slate-400">Solve classic and contest-grade challenges from multiple sources without switching
             tabs.</p>
         </div>
         <div class="flex flex-col items-center text-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mb-4 text-cyan-400" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor" stroke-width="2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="h-12 w-12 mb-4 text-cyan-400">
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path
-              d="M18.5 3a2.5 2.5 0 1 1 -.912 4.828l-4.556 4.555a5.475 5.475 0 0 1 .936 3.714l2.624 .787a2.5 2.5 0 1 1 -.575 1.916l-2.623 -.788a5.5 5.5 0 0 1 -10.39 -2.29l-.004 -.222l.004 -.221a5.5 5.5 0 0 1 2.984 -4.673l-.788 -2.624a2.498 2.498 0 0 1 -2.194 -2.304l-.006 -.178l.005 -.164a2.5 2.5 0 1 1 4.111 2.071l.787 2.625a5.475 5.475 0 0 1 3.714 .936l4.555 -4.556a2.487 2.487 0 0 1 -.167 -.748l-.005 -.164l.005 -.164a2.5 2.5 0 0 1 2.495 -2.336z" />
+            <path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+            <path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1" />
+            <path d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+            <path d="M17 10h2a2 2 0 0 1 2 2v1" />
+            <path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+            <path d="M3 13v-1a2 2 0 0 1 2 -2h2" />
           </svg>
           <h4 class="font-bold text-lg mb-2">
             Collaborative
@@ -139,27 +149,82 @@
           </p>
         </div>
         <div class="flex flex-col items-center text-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mb-4 text-cyan-400" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M12 8v4l3 3m7 1.5A10 10 0 1112 2a10 10 0 0110 10.5z" />
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="h-12 w-12 mb-4 text-cyan-400">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 17h4v4h-4z" />
+            <path d="M17 3h4v4h-4z" />
+            <path d="M11 19h5.5a3.5 3.5 0 0 0 0 -7h-8a3.5 3.5 0 0 1 0 -7h4.5" />
           </svg>
           <h4 class="font-bold text-lg mb-2">Visual Learning</h4>
           <p class="text-slate-400">Interactive walkthroughs and step-by-step visualizations deepen algorithmic insight.
           </p>
         </div>
+        <div class="flex flex-col items-center text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+            class="h-12 w-12 mb-4 text-cyan-400">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M5.931 6.936l1.275 4.249m5.607 5.609l4.251 1.275" />
+            <path d="M11.683 12.317l5.759 -5.759" />
+            <path d="M5.5 5.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0" />
+            <path d="M18.5 5.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0" />
+            <path d="M18.5 18.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0" />
+            <path d="M8.5 15.5m-4.5 0a4.5 4.5 0 1 0 9 0a4.5 4.5 0 1 0 -9 0" />
+          </svg>
+          <h4 class="font-bold text-lg mb-2">Federation</h4>
+          <p class="text-slate-400">Interconnect platform instances via ActivityPub, enabling cross-instance
+            challenges and community growth.</p>
+          </p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"
+            class="h-12 w-12 mb-4 text-cyan-400">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M15 15m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+            <path d="M13 17.5v4.5l2 -1.5l2 1.5v-4.5" />
+            <path d="M10 19h-5a2 2 0 0 1 -2 -2v-10c0 -1.1 .9 -2 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -1 1.73" />
+            <path d="M6 9l12 0" />
+            <path d="M6 12l3 0" />
+            <path d="M6 15l2 0" />
+          </svg>
+          <h4 class="font-bold text-lg mb-2">OpenCP Problem Standard</h4>
+          <p class="text-slate-400">OPS is an open schema for creating, sharing, and deploying programming problems,
+            ensuring consistency and interoperability across providers.</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"
+            class="h-12 w-12 mb-4 text-cyan-400">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" />
+            <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" />
+            <path d="M15 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+          </svg>
+          <h4 class="font-bold text-lg mb-2">Future Proof</h4>
+          <p class="text-slate-400">
+            Open-CP is designed to harmonize with Generative AI
+            and Quantum Computing problems.
+          </p>
+        </div>
       </div>
+
     </div>
   </section>
 
   <!-- Ecosystem -->
-  <section id="ecosystem" class="py-24 px-6 md:px-20 reveal opacity-0 translate-y-6">
+  <section id="community" class="py-24 px-6 md:px-20 reveal opacity-0 translate-y-6">
     <div class="max-w-4xl mx-auto text-center">
       <h3 class="text-3xl md:text-4xl font-extrabold mb-6">Built by &amp; for the community</h3>
       <p class="text-slate-300 max-w-3xl mx-auto mb-10">
         Open-CP aims to thrive on collaboration with universities, contest organizers, and open‑source contributors.
-        Join us on <a href="https://github.com/Open-Competitive-Programming"
-          class="text-cyan-400 underline hover:text-cyan-300">GitHub</a>, to track our effort and don't hesitate to contribute by sharing
+        Join us on <a href="https://github.com/Open-Competitive-Programming" target="_blank"
+          class="text-cyan-400 underline hover:text-cyan-300">GitHub</a> and <a
+          class="text-cyan-400 underline hover:text-cyan-300" href="https://www.linkedin.com/company/open-cp"
+          target="_blank">LinkedIn</a>, to track our effort and don't hesitate to
+        contribute by sharing
         problems or ideas. Start shaping the future of competitive programming!
       </p>
       <div class="flex flex-wrap justify-center gap-6 opacity-80">
@@ -171,21 +236,91 @@
     </div>
   </section>
 
+  <section id="ecosystem" class="py-24 px-6 md:px-20 bg-slate-900/60 backdrop-blur reveal opacity-0 translate-y-6">
+    <div class="mt-16 text-center">
+      <h3 class="text-3xl md:text-4xl font-extrabold mb-6">Architecture</h3>
+      <p class="text-slate-300 max-w-3xl mx-auto mb-10">
+        Open-CP is designed with a Kubernetes-native architecture, making it cloud-ready and easily deployable
+        on-premise.
+        This ensures scalability, reliability, and flexibility across diverse environments.
+        Security and privacy are at the core of the platform, leveraging containerization, network policies, and
+        encryption
+        to protect user data and maintain compliance with modern standards.
+      </p>
+      <div class="max-w-5xl mx-auto">
+        <div class="flex flex-col items-center text-center">
+          <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none" class="h-14 mb-4 text-cyan-400">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path fill="#131c2f"
+                d="M4.5 14.569c.214.278.539.431.874.431h5.251c.335 0 .66-.165.875-.434l3.258-4.178c.214-.278.288-.633.214-.978l-1.165-5.207a1.128 1.128 0 00-.606-.777l-4.714-2.31A1.062 1.062 0 008.002 1c-.168 0-.335.038-.485.115l-4.715 2.32a1.129 1.129 0 00-.605.777L1.032 9.42c-.084.345 0 .7.214.978L4.5 14.568z">
+              </path>
+              <path fill="#21d3ee" fill-rule="evenodd"
+                d="M12.741 9.128c.098.002.196.01.293.024l.058.013.031.008a.308.308 0 01.26.371.306.306 0 01-.396.223h-.004l-.003-.001-.003-.002a1.58 1.58 0 00-.03-.006l-.05-.01a2.55 2.55 0 01-.274-.106 2.867 2.867 0 00-.533-.157.242.242 0 00-.171.064 4.656 4.656 0 00-.131-.023 3.971 3.971 0 01-1.764 2.212c.015.042.032.083.051.123a.239.239 0 00-.023.18c.074.17.165.332.271.484.06.078.114.16.164.244l.028.057.012.025a.306.306 0 01-.381.44.308.308 0 01-.172-.18l-.01-.02a1.57 1.57 0 01-.028-.058 2.546 2.546 0 01-.089-.28 2.837 2.837 0 00-.21-.512.242.242 0 00-.156-.095l-.03-.053-.035-.064a3.97 3.97 0 01-2.823-.007l-.07.125a.25.25 0 00-.132.064 2.13 2.13 0 00-.237.548 2.518 2.518 0 01-.088.28 1.196 1.196 0 01-.025.05l-.013.027v.001a.306.306 0 01-.421.173.308.308 0 01-.173-.314.306.306 0 01.041-.12l.014-.03.026-.052c.05-.085.104-.166.164-.244.108-.156.2-.322.277-.496a.302.302 0 00-.028-.173l.056-.133A3.972 3.972 0 014.22 9.532l-.134.023a.34.34 0 00-.176-.062 2.871 2.871 0 00-.533.156c-.09.04-.181.075-.274.105a1.017 1.017 0 01-.05.011l-.03.007H3.02l-.002.002h-.005a.308.308 0 01-.397-.349.306.306 0 01.261-.245l.005-.001h.002l.006-.002c.024-.006.054-.014.076-.018.097-.013.195-.021.293-.023.186-.013.37-.043.549-.09a.422.422 0 00.131-.133l.128-.037a3.938 3.938 0 01.625-2.752l-.098-.087a.338.338 0 00-.062-.176 2.854 2.854 0 00-.455-.319 2.557 2.557 0 01-.254-.148l-.048-.038-.015-.013-.004-.003a.323.323 0 01-.076-.45.295.295 0 01.244-.107.365.365 0 01.213.08l.022.017c.016.013.034.026.046.037.072.067.139.139.202.213.125.137.263.262.412.372.056.03.121.036.182.018l.11.078a3.938 3.938 0 012.552-1.224l.008-.129a.332.332 0 00.099-.158 2.844 2.844 0 00-.034-.553 2.56 2.56 0 01-.042-.29v-.082-.005A.306.306 0 018 2.82a.308.308 0 01.306.337v.087a2.529 2.529 0 01-.041.29 2.85 2.85 0 00-.035.553.242.242 0 00.1.153v.007l.007.129c.967.088 1.87.522 2.54 1.223l.116-.082a.34.34 0 00.186-.02c.149-.11.287-.236.412-.373.063-.075.13-.146.202-.213l.051-.04.017-.014a.307.307 0 11.381.477l-.024.02c-.015.012-.03.025-.043.034a2.537 2.537 0 01-.254.148 2.87 2.87 0 00-.455.32.241.241 0 00-.058.172l-.05.044-.058.053c.542.806.77 1.783.637 2.745l.123.036c.031.055.077.101.133.132.179.048.363.078.548.09zM7.291 5.24c.107-.024.216-.043.326-.056l-.09 1.6-.008.004a.268.268 0 01-.293.256.27.27 0 01-.135-.05l-.002.001-1.316-.93c.419-.41.945-.696 1.518-.825zm1.618 1.75l1.308-.924a3.182 3.182 0 00-1.833-.882l.09 1.598h.002a.268.268 0 00.294.256.27.27 0 00.135-.05l.004.002zm2.248 1.656L9.609 8.2l-.002-.006a.27.27 0 01-.185-.343.27.27 0 01.08-.12L9.5 7.73l1.195-1.067c.366.594.527 1.29.46 1.983zM9.096 9.5l.618 1.49a3.148 3.148 0 001.275-1.598l-1.593-.269-.002.003a.26.26 0 00-.166.023.27.27 0 00-.13.348l-.002.003zm-.385 1.905c-.573.13-1.17.1-1.727-.088l.777-1.4h.001a.27.27 0 01.475-.001h.006l.779 1.402a3.286 3.286 0 01-.311.087zm-2.418-.422l.611-1.474-.004-.006a.268.268 0 00-.297-.37L6.6 9.13l-1.579.267a3.16 3.16 0 001.272 1.586zm-.997-4.32l1.201 1.071-.001.007a.269.269 0 01-.106.462l-.001.005-1.54.443a3.134 3.134 0 01.447-1.988zm2.95 1.154h-.492l-.307.38.11.476.443.213.442-.212.11-.476-.306-.381z"
+                clip-rule="evenodd"></path>
+            </g>
+          </svg>
+          <h4 class="font-bold text-lg mb-2">Kubernetes Native</h4>
+          <p class="text-slate-400">Deployable on any Kubernetes Cluster via <a href="https://jsonnet.org"
+              class="text-cyan-400 underline hover:text-cyan-300" target="_blank">Jsonnet</a> & <a
+              href="https://grafana.com/oss/tanka/" class="text-cyan-400 underline hover:text-cyan-300"
+              target="_blank">Tanka</a> generated
+            manifests.</p>
+        </div>
+        <div class="flex flex-col items-center text-center mt-6">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+            class="h-12 w-12 mb-4 text-cyan-400">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 20h7" />
+            <path d="M14 20h7" />
+            <path d="M10 20a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+            <path d="M12 16v2" />
+            <path
+              d="M8 16.004h-1.343c-2.572 -.004 -4.657 -2.011 -4.657 -4.487c0 -2.475 2.085 -4.482 4.657 -4.482c.393 -1.762 1.794 -3.2 3.675 -3.773c1.88 -.572 3.956 -.193 5.444 1c1.488 1.19 2.162 3.007 1.77 4.769h.99c1.913 0 3.464 1.56 3.464 3.486c0 1.927 -1.551 3.487 -3.465 3.487h-2.535" />
+          </svg>
+          <h4 class="font-bold text-lg mb-2">Cloud Ready</h4>
+          <p class="text-slate-400">Optimized for deployment on cloud and on-premise infrastructure, ensuring high
+            availability.
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center text-center mt-6">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+            class="h-12 w-12 mb-4 text-cyan-400">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M13.5 21h-6.5a2 2 0 0 1 -2 -2v-6a2 2 0 0 1 2 -2h10a2 2 0 0 1 1.74 1.012" />
+            <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
+            <path d="M8 11v-4a4 4 0 1 1 8 0v4" />
+            <path d="M19 16l-2 3h4l-2 3" />
+          </svg>
+          <h4 class="font-bold text-lg mb-2">Security & Privacy</h4>
+          <p class="text-slate-400">
+            Built with security in mind, Open-CP accounts for data protection and user privacy.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Challenge CTA -->
   <section id="cta" class="py-24 px-6 md:px-20">
     <div class="max-w-3xl mx-auto bg-slate-700 p-8 rounded-2xl shadow-2xl border border-slate-700">
       <h3 class="text-2xl md:text-3xl font-extrabold mb-4 text-center">Challenge: Add Two Numbers</h3>
       <p class="text-slate-300 mb-6 text-center">Write a program that reads two integers <code>a</code> and
-      <code>b</code> from standard input and prints their sum.
+        <code>b</code> from standard input and prints their sum.
       </p>
 
       <label for="editor" class="block mb-2 font-semibold">Python code:</label>
 
       <!-- Ace Editor container -->
-      <div id="editor" class="w-full rounded-lg font-mono text-sm leading-tight bg-slate-900" style="height:300px"></div>
+      <div id="editor" class="w-full rounded-lg font-mono text-sm leading-tight bg-slate-900" style="height:300px">
+      </div>
 
       <button id="run"
-      class="mt-4 bg-cyan-500 hover:bg-cyan-400 active:bg-cyan-600 text-slate-900 font-bold py-2 px-6 rounded-full">Run</button>
+        class="mt-4 bg-cyan-500 hover:bg-cyan-400 active:bg-cyan-600 text-slate-900 font-bold py-2 px-6 rounded-full">Run</button>
 
       <pre id="output" class="mt-6 bg-black text-green-400 p-4 rounded-lg whitespace-pre-wrap"></pre>
     </div>
@@ -238,7 +373,7 @@
         const ctaSection = document.getElementById('cta');
         ctaSection.classList.remove('hidden');
         ctaSection.scrollIntoView({ behavior: 'smooth' });
-        setTimeout(() => editor.resize(), 0); 
+        setTimeout(() => editor.resize(), 0);
       });
 
       // Run code on button click
